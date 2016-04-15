@@ -21,7 +21,7 @@ app.use(middleware.logger);
 // middleware is 2nd param
 // callback function is 3rd param
 app.get('/about',middleware.requireAuthentication,  function (req, res) {
-    res.send('About Us');
+    res.send('About Us!');
 })
 
 // expose public folder
