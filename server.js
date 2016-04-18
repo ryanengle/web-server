@@ -2,16 +2,7 @@ var express = require('express');
 var app = express();
 var PORT = 3000;  // CAPS means it should be constant
 
-var middleware = {
-  requireAuthentication: function (req, res, next) {
-      console.log('private route hit');
-      next();
-  },
-  logger: function (req, res, next) {
-      console.log('Request ' + new Date().toString() + ' ' + req.method + ' ' + req.originalUrl);
-      next();
-  }
-};
+var middleware = require('./middleware.js')
 // location of this call matters -- attaching the middleware
 // application level (every page) 
 //app.use(middleware.requireAuthentication);
