@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
-var PORT = 3000;  // CAPS means it should be constant
+//var PORT = 3000;  // CAPS means it should be constant
+var PORT = process.env.PORT || 5000;
 
 var middleware = require('./middleware.js')
 // location of this call matters -- attaching the middleware
